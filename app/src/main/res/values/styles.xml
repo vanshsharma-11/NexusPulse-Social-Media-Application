@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Main App Theme -->
+
+
+    <!-- Circle Profile Image -->
+    <style name="CircleImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">50%</item>
+    </style>
+
+    <!-- Rounded Post Image -->
+    <style name="RoundedImageStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">16dp</item>
+    </style>
+
+    <!-- Username Text -->
+    <style name="UsernameTextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Handle & Time Text -->
+    <style name="HandleTextStyle">
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Tweet Content Text -->
+    <style name="TweetContentStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:lineSpacingExtra">2dp</item>
+    </style>
+
+    <!-- Action Counter (like, retweet count) -->
+    <style name="ActionCounterStyle">
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Tab Text Style -->
+    <style name="TabTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="textAllCaps">false</item>
+    </style>
+
+</resources>

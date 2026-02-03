@@ -1,0 +1,55 @@
+<resources>
+    <!-- Display Styles -->
+    <style name="TextAppearance.NexusPulse.Display" parent="TextAppearance.Material3.DisplayLarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">32sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Headline Styles -->
+    <style name="TextAppearance.NexusPulse.Headline" parent="TextAppearance.Material3.HeadlineMedium">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Username Style -->
+    <style name="TextAppearance.NexusPulse.Username" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <!-- Handle Style -->
+    <style name="TextAppearance.NexusPulse.Handle" parent="TextAppearance.Material3.BodyMedium">
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Tweet Content Style -->
+    <style name="TextAppearance.NexusPulse.TweetContent" parent="TextAppearance.Material3.BodyLarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="lineHeight">20sp</item>
+    </style>
+
+    <!-- Timestamp Style -->
+    <style name="TextAppearance.NexusPulse.Timestamp" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textSize">15sp</item>
+    </style>
+
+    <!-- Counter Style (likes, retweets) -->
+    <style name="TextAppearance.NexusPulse.Counter" parent="TextAppearance.Material3.BodySmall">
+        <item name="android:textColor">@color/gray_text</item>
+        <item name="android:textSize">13sp</item>
+    </style>
+
+    <!-- Button Text Style -->
+    <style name="TextAppearance.NexusPulse.Button" parent="TextAppearance.Material3.LabelLarge">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">15sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+</resources>

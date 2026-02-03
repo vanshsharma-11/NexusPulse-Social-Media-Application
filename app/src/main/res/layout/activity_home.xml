@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <!-- App Bar with Tabs -->
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/black"
+        app:elevation="0dp">
+
+        <!-- FrameLayout used for perfect logo centering -->
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="56dp">
+
+            <!-- Toolbar with only avatar (no logo, no manual search icon) -->
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@color/black"
+                app:layout_scrollFlags="scroll|enterAlways|snap">
+
+                <com.google.android.material.imageview.ShapeableImageView
+                    android:id="@+id/profileAvatar"
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_profile"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:shapeAppearanceOverlay="@style/CircleImageStyle" />
+            </com.google.android.material.appbar.MaterialToolbar>
+
+            <!-- Logo overlaid and truly centered regardless of menu icons -->
+            <ImageView
+                android:id="@+id/logoNexusPulse"
+                android:layout_width="90dp"
+                android:layout_height="56dp"
+                android:layout_gravity="center"
+                android:src="@drawable/logo_nexuspulse"
+                android:scaleType="fitCenter"
+                android:contentDescription="@string/app_name" />
+        </FrameLayout>
+
+        <!-- Tab Layout -->
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@color/black"
+            app:tabTextColor="@color/gray_text"
+            app:tabSelectedTextColor="@color/white"
+            app:tabIndicatorColor="@color/twitter_blue"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabGravity="fill"
+            app:tabTextAppearance="@style/TabTextStyle"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <!-- SwipeRefreshLayout with RecyclerView -->
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/swipeRefresh"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerViewPosts"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:clipToPadding="false"
+            android:scrollbars="vertical"/>
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <!-- Floating Action Button (Tweet) -->
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabTweet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="16dp"
+        android:src="@android:drawable/ic_input_add"
+        app:tint="@color/white"
+        app:backgroundTint="@color/twitter_blue"
+        app:elevation="6dp"
+        app:fabSize="normal"
+        android:contentDescription="Create Tweet"/>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+     App Bar with Tabs
+<com.google.android.material.appbar.AppBarLayout
+android:id="@+id/appBarLayout"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:background="@color/black"
+app:elevation="0dp">
+
+Toolbar
+<com.google.android.material.appbar.MaterialToolbar
+    android:id="@+id/toolbar"
+    android:layout_width="match_parent"
+    android:layout_height="56dp"
+    android:background="@color/black"
+    app:layout_scrollFlags="scroll|enterAlways|snap">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+         Profile Avatar (Left)
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/profileAvatar"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_profile"
+            android:clickable="true"
+            android:focusable="true"
+            app:shapeAppearanceOverlay="@style/CircleImageStyle"/>
+
+         NexusPulse Logo (Center)
+        <ImageView
+            android:id="@+id/logoNexusPulse"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/logo_nexuspulse"
+            android:scaleType="fitCenter"
+            android:contentDescription="@string/app_name"/>
+
+    </RelativeLayout>
+</com.google.android.material.appbar.MaterialToolbar>
+
+  Tab Layout
+<com.google.android.material.tabs.TabLayout
+    android:id="@+id/tabLayout"
+    android:layout_width="match_parent"
+    android:layout_height="48dp"
+    android:background="@color/black"
+    app:tabTextColor="@color/gray_text"
+    app:tabSelectedTextColor="@color/white"
+    app:tabIndicatorColor="@color/twitter_blue"
+    app:tabIndicatorHeight="3dp"
+    app:tabMode="fixed"
+    app:tabGravity="fill"
+    app:tabTextAppearance="@style/TabTextStyle"/>
+
+</com.google.android.material.appbar.AppBarLayout>
+
+     SwipeRefreshLayout with RecyclerView
+<androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+android:id="@+id/swipeRefresh"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+<androidx.recyclerview.widget.RecyclerView
+    android:id="@+id/recyclerViewPosts"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:clipToPadding="false"
+    android:scrollbars="vertical"/>
+
+</androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    Floating Action Button (Tweet)
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+android:id="@+id/fabTweet"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:layout_gravity="bottom|end"
+android:layout_margin="16dp"
+android:src="@android:drawable/ic_input_add"
+app:tint="@color/white"
+app:backgroundTint="@color/twitter_blue"
+app:elevation="6dp"
+app:fabSize="normal"
+android:contentDescription="Create Tweet"/>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
+
+-->

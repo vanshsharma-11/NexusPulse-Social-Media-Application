@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">NexusPulse</string>
+
+    <!-- Post Item Strings -->
+    <string name="profile">Profile</string>
+    <string name="username">Username</string>
+    <string name="username_handle">\@username</string>
+    <string name="timestamp">5m</string>
+    <string name="post_content_placeholder">Post content goes here…</string>
+    <string name="comment">Comment</string>
+    <string name="retweet">Retweet</string>
+    <string name="like">Like</string>
+    <string name="count_zero">0</string>
+
+    <!-- Other Strings (add as needed) -->
+    <string name="create_post">Create Post</string>
+    <string name="edit_profile">Edit Profile</string>
+    <string name="search">Search</string>
+</resources>
