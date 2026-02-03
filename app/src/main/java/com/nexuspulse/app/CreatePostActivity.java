@@ -169,7 +169,7 @@ public class CreatePostActivity extends AppCompatActivity {
             btnPost.setEnabled(false);
         }
     }
-
+    //image selection upto new standards
     private void selectImage() {
         if (ContextCompat.checkSelfPermission(this, Manifest.permission.READ_EXTERNAL_STORAGE)
                 != PackageManager.PERMISSION_GRANTED) {
